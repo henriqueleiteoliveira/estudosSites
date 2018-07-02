@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>Funcoes CSS em jQuery</title>
+<script src="jquery.min.js"></script>
+<script type="application/x-javascript">
+function dimensaoCamada(camada){
+camada = $(camada);
+var dimensoes = "";
+dimensoes += "Dimensoes internas: " + camada.innerWidth() + "x" + camada.innerHeight();
+dimensoes += "nDimensoes externas: " + camada.outerWidth() + "x" + camada.outerHeight();
+alert(dimensoes);
+}
+function posiçãoCamada(camada){
+camada = $(camada);
+var posiçao = "";
+posiçao += "Posiçao relativa ao documento:nLEFT: " + camada.offset().left + "nTOP:" + camada.offset().top;
+posiçao += "nnPosiçao se não tivesse margem:nLEFT: " + camada.position().left + "nTOP:" + camada.position().top;
+alert(posiçao);
+}
+$(document).ready(function(){
+$("#botaodimensoes").click(function(){
+dimensaoCamada("#camada1"); 
+});
+$("#botaoposiçao").click(function(){
+posiçaoCamada("#camada1"); 
+});
+$("#botaotamanho").click(function(){
+$("#camada1").css("width", 200);
+});
+$("#botaomargem").click(function(){
+$("#camada1").css("margin", 20);
+});
+$("#botaodimensoesc2").click(function(){
+dimensaoCamada("#camada2"); 
+});
+$("#botaoposiçaoc2").click(function(){
+posiçaoCamada("#camada2"); 
+});
+
+});
+
+</script>
+
+</head>
+<body>
+<h1>Funçoes CSS em jQuery de dimensões e posição</h1>
+<p>Testando funções de localização de elementos na página...</p>
+<div id="camada1" style="padding: 24px; background-color: #ffccdd; float: left; border: 2px dotted #666;">
+<h2>camada1:</h2>
+Vou criar esta camada para ver quanto mede e onde está posicionada.
+</div>
+<br style="clear: both;">
+<div style="margin: 10px;">
+<button id="botaodimensoes" type="button">Dimensoes de camada1</button>
+<button id="botaoposiçao" type="button">Posiçao de camada1</button>
+<button id="botaotamanho" type="button">Mudar tamanho camada1</button>
+<button id="botaomargem" type="button">Mudar margem camada1</button>
+</div>
+
+<div style="margin: 10px;">
+<button id="botaodimensoesc2" type="button">Dimensoes de camada2</button>
+<button id="botaoposiçaoc2" type="button">Posiçao de camada2</button>
+</div>
+
+<br>
+Desloca a página para baixo para ver a camada2...
+<br>
+<br>
+...
+<br>
+<div id="camada2" style="background-color:#ccc; border-bottom: 5px solid #999; margin-left: 10px;">
+Esta camada está muito para baixo!!
+</div>
+</body>
+</html>

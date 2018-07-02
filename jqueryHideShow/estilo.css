@@ -1,0 +1,98 @@
+.fa-1x {
+    font-size: 1.5rem;
+}
+.navbar-toggler.toggler-example {
+    cursor: pointer;
+}
+.dark-blue-text {
+    color: #0A38F5;
+}
+.dark-pink-text {
+    color: #AC003A;
+}
+.dark-amber-text {
+    color: #ff6f00;
+}
+.dark-teal-text {
+    color: #004d40;
+}
+.d1{
+	width: 400px;
+	height: 400px;
+	z-index: 2;
+	background-color: red;
+}
+.d2{
+	position: absolute;
+	margin-top: -110px;
+	width: 200px;
+	height: 200px;
+	z-index: -1;
+	background-color: blue;
+}
+.grid-container {
+  display: grid; 
+  grid-gap: 50px 100px;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+/*Grid 2 com caixas de tamanho diferente*/
+.grid-box{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+}
+.box1{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  border: 1px solid rgba(0, 0, 0, 0.8);  
+}
+.box2{
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+}
+.box3{
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+}
+.box4{
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+}
+/*imagem que ao passar o mouse aparece a descrição nela*/                 
+.descricao{
+    display: none;
+}
+.item:hover .descricao{
+    display: block;
+}
+/*Cortar imagem*/
+.objectImage {
+    width: 600px;
+    height: 120px;
+    object-fit: cover;
+    object-position: center;
+}
+.imagemNormal {
+    width: 600px;
+    height: 120px;
+}

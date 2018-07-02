@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Matheus Piscioneri</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="jquery.min.js"></script>  
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("#MostrarMensagem").click(MostrarMensagem);
+                $("#EsconderMensagem").click(EsconderMensagem);
+                $(".pesquisar").click(MostrarEsconderMensagem);
+                });
+ 
+            function MostrarMensagem(){
+                $("#Mensagem").show();
+            }
+            function EsconderMensagem(){
+                $("#Mensagem").hide();
+            }
+            function MostrarEsconderMensagem(){
+                $("#Mensagem").toggle();
+            }
+        </script>
+        <style type="text/css">
+            div { display: none }         /* Por padrão, os divs iniciam ocultos. */
+            div:target { display: block } /* Exibe quando o elemento é alvo. */
+        </style>
+    </head>
+    <body>
+        <button type="button" id="MostrarMensagem">Mostrar Mensagem</button>
+        <button type="button" id="EsconderMensagem">Esconder Mensagem</button>
+        <button type="button" class="MostrarEsconderMensagem">Mostrar e Esconder Mensagem</button>
+ 
+        <div id="Mensagem" style="display:none">Mensagem de teste!</div>
+        <button type="submit" class="pesquisar" style="background: url('icon-search.svg') no-repeat center top / cover; width: 25px; border:none;
+        height: 25px;" name=""></button>
+        <br><br><br><br>
+        <a href="#imagem">teste1</a>
+        <a href="#img">teste2</a>
+        <div id="imagem"><br>funfou 1</div>
+        <div id="img"><br>funfou 2</div>
+    </body>
+</html>
